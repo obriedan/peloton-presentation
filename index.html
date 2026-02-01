@@ -3,41 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peloton Presentation Resources</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 2rem;
-            background-color: #f4f4f9;
-            color: #333;
-        }
-        header {
-            background-color: #1b1b1b;
-            color: white;
-            padding: 2rem;
-            border-radius: 8px;
-            margin-bottom: 2rem;
-            text-align: center;
-        }
-        h1 { margin: 0; }
-        .content {
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-    </style>
+    <title>Peloton Business Intelligence Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
+
     <header>
-        <h1>Peloton Presentation Data Room</h1>
+        <div class="logo">PELOTON <span>BI</span></div>
+        <nav>
+            <a href="#financials">Financial Turnaround</a>
+            <a href="#scorecard">Execution Scorecard</a>
+            <a href="#strategy">Strategic Outlook</a>
+        </nav>
     </header>
-    <div class="content">
-        <p>This site serves as the repository for the Peloton business intelligence presentation and source materials.</p>
-        <p><em>Documents and analysis are currently being curated.</em></p>
+
+    <main>
+        <!-- Section 1: Financial Turnaround -->
+        <section id="financials">
+            <h2>Financial Turnaround (Slide 1)</h2>
+            <div class="dashboard-grid">
+                <!-- Revenue Chart -->
+                <div class="card">
+                    <h3>Revenue Trajectory: Hardware vs. Subscription</h3>
+                    <div class="chart-container">
+                        <canvas id="revenueChart"></canvas>
+                    </div>
+                    <div class="story-panel">
+                        <p><span class="insight-highlight">Insight:</span> Revenue mix transformed from 78% hardware (FY21) to 67% subscription (FY25). This is not shrinkage—it's transformation.</p>
+                        <div class="text-right"><span class="source-trigger" data-source="revenue_turnaround">View Source</span></div>
+                    </div>
+                </div>
+
+                <!-- Profitability Chart -->
+                <div class="card">
+                    <h3>Profitability Journey: EBITDA & FCF</h3>
+                    <div class="chart-container">
+                        <canvas id="profitChart"></canvas>
+                    </div>
+                    <div class="story-panel">
+                        <p><span class="insight-highlight">Insight:</span> Adjusted EBITDA swung $1.4B from FY22 lows to +$404M in FY25. Free Cash Flow improved by $816M.</p>
+                        <div class="text-right"><span class="source-trigger" data-source="profitability_swing">View Source</span></div>
+                    </div>
+                </div>
+
+                <!-- Restructuring Chart -->
+                <div class="card">
+                    <h3>Operational Restructuring Scale</h3>
+                    <div class="chart-container">
+                        <canvas id="restructuringChart"></canvas>
+                    </div>
+                    <div class="story-panel">
+                        <p><span class="insight-highlight">Insight:</span> Headcount reduced by 26% since FY23. Exited ALL owned manufacturing and shifted to asset-light 3PL logistics.</p>
+                        <div class="text-right"><span class="source-trigger" data-source="restructuring">View Source</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Execution Scorecard -->
+        <section id="scorecard">
+            <h2>Execution Scorecard (Slide 2)</h2>
+            <div class="dashboard-grid">
+                <!-- Scorecard Table -->
+                <div class="card" style="grid-column: span 2;"> <!-- Make wider -->
+                    <h3>Targets vs. Actuals: Credibility Assessment</h3>
+                    <div class="table-container">
+                        <table id="scorecardTable">
+                            <thead>
+                                <tr>
+                                    <th>Metric</th>
+                                    <th>Target</th>
+                                    <th class="text-right">Actual</th>
+                                    <th class="text-center">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                    <div class="story-panel">
+                        <p><span class="insight-highlight">Insight:</span> Management has a consistent track record of beating guidance (5 consecutive quarters). Cost discipline is GREEN; Growth is RED.</p>
+                        <div class="text-right"><span class="source-trigger" data-source="credibility">View Source</span></div>
+                    </div>
+                </div>
+
+                <!-- Subscriber Chart -->
+                <div class="card">
+                    <h3>Subscriber Health: Base vs. Churn</h3>
+                    <div class="chart-container">
+                        <canvas id="subChart"></canvas>
+                    </div>
+                    <div class="story-panel">
+                        <p><span class="insight-highlight">Insight:</span> Subscriber base eroding (Peak ~3.0M → 2.80M). Churn up to 1.6%. New customer acquisition engine is stalling.</p>
+                        <div class="text-right"><span class="source-trigger" data-source="churn_risk">View Source</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Strategic Outlook -->
+        <section id="strategy">
+            <h2>Strategic Outlook (Slide 3)</h2>
+            <div class="dashboard-grid">
+                <!-- Opportunity Table -->
+                <div class="card">
+                    <h3>Opportunity Assessment</h3>
+                    <div class="table-container">
+                        <table id="oppTable">
+                            <thead>
+                                <tr>
+                                    <th>Opportunity</th>
+                                    <th>Prob.</th>
+                                    <th>Impact</th>
+                                    <th class="text-right">Rec.</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                    <div class="story-panel">
+                        <p><span class="insight-highlight">Insight:</span> Opportunities in Content Licensing and B2B are high impact. LTV extension via 'Peloton IQ' shows early promise.</p>
+                        <div class="text-right"><span class="source-trigger" data-source="growth_strategy">View Source</span></div>
+                    </div>
+                </div>
+
+                <!-- Risk Table -->
+                <div class="card">
+                    <h3>Risk Assessment</h3>
+                    <div class="table-container">
+                        <table id="riskTable">
+                            <thead>
+                                <tr>
+                                    <th>Risk</th>
+                                    <th class="text-center">Status</th>
+                                    <th>Mitigation</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                    <div class="story-panel">
+                        <p><span class="insight-highlight">Insight:</span> Subscriber erosion is the critical trip-wire. &lt;2.5M subs triggers strategic review.</p>
+                        <div class="text-right"><span class="source-trigger" data-source="churn_risk">View Source</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Source Viewer Side Panel -->
+    <div id="sourcePanel" class="source-panel">
+        <button id="closeSourcePanel" class="close-btn">&times;</button>
+        <div id="sourceContent" class="source-content">
+            <h3>Source Material</h3>
+            <p style="color: #a0a0a0; margin-top: 2rem;">Select a "View Source" link on the dashboard to see the underlying data and citations.</p>
+        </div>
     </div>
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/dashboard.js"></script>
 </body>
 </html>
