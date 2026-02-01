@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peloton Risk Post-Mortem</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">PELOTON <span>BI</span></div>
+        <nav>
+            <a href="index.html">Turnaround Overview</a>
+            <a href="innovation.html">Product Innovation</a>
+            <a href="restructuring.html">Restructuring Roadmap</a>
+            <a href="post-mortem.html" class="active">Risk Post-Mortem</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="failures">
+            <h2>The Five Strategic Failures (FY22–FY24)</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 2rem;">Analyzing the root causes of the $2.4B cash burn and the structural fixes implemented.</p>
+
+            <div class="dashboard-grid">
+                <!-- Failure 1 -->
+                <div class="card">
+                    <div style="color: var(--accent-peloton); font-weight: 700; margin-bottom: 0.5rem;">FAILURE #1</div>
+                    <h3>Demand Misforecasting</h3>
+                    <p>Over-scaling operations based on pandemic-era tailwinds. Lead to unsustainable fixed costs.</p>
+                    <div class="story-panel" style="background-color: rgba(40, 167, 69, 0.1); border-top: 1px solid var(--accent-green);">
+                        <p><span style="color: var(--accent-green); font-weight: 600;">FIX:</span> Rightsized the cost base for a 2.8M subscriber steady-state.</p>
+                    </div>
+                </div>
+
+                <!-- Failure 2 -->
+                <div class="card">
+                    <div style="color: var(--accent-peloton); font-weight: 700; margin-bottom: 0.5rem;">FAILURE #2</div>
+                    <h3>Inventory Glut</h3>
+                    <p>Long-term supply commitments for hardware that didn't sell, forcing massive write-downs.</p>
+                    <div class="story-panel" style="background-color: rgba(40, 167, 69, 0.1); border-top: 1px solid var(--accent-green);">
+                        <p><span style="color: var(--accent-green); font-weight: 600;">FIX:</span> Exited manufacturing; switched to Rexon (JIT model).</p>
+                    </div>
+                </div>
+
+                <!-- Failure 3 -->
+                <div class="card">
+                    <div style="color: var(--accent-peloton); font-weight: 700; margin-bottom: 0.5rem;">FAILURE #3</div>
+                    <h3>Vertical Integration Rigidity</h3>
+                    <p>Owned logistics and 135 retail showrooms created a high break-even point.</p>
+                    <div class="story-panel" style="background-color: rgba(40, 167, 69, 0.1); border-top: 1px solid var(--accent-green);">
+                        <p><span style="color: var(--accent-green); font-weight: 600;">FIX:</span> 100% shift to 3PL and 3P retail (Amazon, Costco).</p>
+                    </div>
+                </div>
+
+                <!-- Failure 4 -->
+                <div class="card">
+                    <div style="color: var(--accent-peloton); font-weight: 700; margin-bottom: 0.5rem;">FAILURE #4</div>
+                    <h3>Safety Recalls</h3>
+                    <p>Tread+ and Bike seat post recalls damaged reputation and slowed momentum.</p>
+                    <div class="story-panel" style="background-color: rgba(40, 167, 69, 0.1); border-top: 1px solid var(--accent-green);">
+                        <p><span style="color: var(--accent-green); font-weight: 600;">FIX:</span> Voluntary proactive recalls and hardware redesign (Cross Training Series).</p>
+                    </div>
+                </div>
+
+                <!-- Failure 5 -->
+                <div class="card">
+                    <div style="color: var(--accent-peloton); font-weight: 700; margin-bottom: 0.5rem;">FAILURE #5</div>
+                    <h3>Market Saturation</h3>
+                    <p>Stalling growth in at-home cardio category as traditional gyms reopened.</p>
+                    <div class="story-panel" style="background-color: rgba(40, 167, 69, 0.1); border-top: 1px solid var(--accent-green);">
+                        <p><span style="color: var(--accent-green); font-weight: 600;">FIX:</span> Pivot to "Wellness" (Strength, Sleep, Recovery) and B2B.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="mitigation">
+            <h2>Current Risk Mitigation</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Remaining Risk</th>
+                            <th class="text-center">Severity</th>
+                            <th>Mitigation Strategy</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Subscriber Base Erosion</td>
+                            <td class="text-center"><span class="status-dot status-red"></span> CRITICAL</td>
+                            <td>Club Peloton loyalty, Teams, and LTV-focused retention tools.</td>
+                        </tr>
+                        <tr>
+                            <td>Tariff Exposure</td>
+                            <td class="text-center"><span class="status-dot status-amber"></span> MODERATE</td>
+                            <td>Supply chain diversification (Thailand/Rexon). $45M impact absorbed in FY26 guide.</td>
+                        </tr>
+                        <tr>
+                            <td>Acquisition Stagnation</td>
+                            <td class="text-center"><span class="status-dot status-red"></span> HIGH</td>
+                            <td>Unified commercial unit (B2B) and third-party retail expansion.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer style="text-align: center; padding: 2rem; color: var(--text-secondary); font-size: 0.8rem;">
+        Risk analysis extracted from Peloton 10-K Risk Factors and Strategic Post-Mortem.
+    </footer>
+
+</body>
+</html>

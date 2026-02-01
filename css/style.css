@@ -245,6 +245,72 @@ th {
     border-bottom: 1px dotted var(--text-secondary);
 }
 
+/* Timeline Component */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: var(--border-color);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1px;
+}
+
+.timeline-item {
+    padding: 1rem 3rem;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    right: -8px;
+    background-color: var(--bg-panel);
+    border: 2px solid var(--accent-peloton);
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.left { left: 0; }
+.right { left: 50%; }
+
+.right::after { left: -8px; }
+
+.timeline-content {
+    padding: 1.5rem;
+    background-color: var(--bg-panel);
+    position: relative;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+}
+
+.timeline-date {
+    color: var(--accent-peloton);
+    font-weight: 700;
+    font-family: var(--font-mono);
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .timeline::after { left: 31px; }
+    .timeline-item { width: 100%; padding-left: 70px; padding-right: 25px; }
+    .timeline-item::after { left: 23px; }
+    .right { left: 0%; }
+}
+
 /* Utilities */
 .text-right { text-align: right; }
 .text-center { text-align: center; }
